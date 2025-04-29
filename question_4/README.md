@@ -4,7 +4,7 @@
 horspool.h
   Contains the declaration of ReadFile, ShiftTable, and HorspoolSearch functions.
 
-bankers_resource_manager.cc
+horspool.cc
   Contains the implementation of functions. ReadFile reads a file with two lines, the first being the pattern to search for, and the second being the text to search in. ShiftTable generates a map of shift values for each character. HorspoolSearch utilizes the shift table to quickly parse the text for the pattern.
 
 # Execution Instructions
