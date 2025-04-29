@@ -4,7 +4,7 @@
 heap_bottom_up.h
   Contains the declaration of ReadFile, MinHeapBottomUp, and MaxHeapBottomUp functions.
 
-bankers_resource_manager.cc
+heap_bottom_up.cc
   Contains the implementation of functions. ReadFile reads a file with two lines, the first being the number of elements in the heap, and the second being the elements. MaxHeapBottomUp constructs a heap rooted at the maximum element that follows parental dominance. MinHeapBottomUp constructs a heap at the minimum element that follows parental submission.
 
 # Execution Instructions
