@@ -8,6 +8,7 @@
 #include <sstream>
 #include <string>
 #include <cmath>
+#include <chrono>
 
 #include "heapsort.h"
 
@@ -118,8 +119,14 @@ int main(int argc, char *argv[]) {
     outputFile << array[i] << ' ';
   outputFile << "\n" << std::endl;
 
-  // Call the Heap Sort function 
+  // Call the Heap Sort function
+  auto start = std::chrono::high_resolution_clock::now();
   HeapSort(array);
+  auto end = std::chrono::high_resolution_clock::now();
+  auto time = std::chrono::duration<double, std::milli>(end - start);
+  outputFile << "HeapSort took " << time.count()
+             << " ms to run." << std::endl;
+
   
   // Display the sorted list
   outputFile << "Print the sorted list, starting by removing the largest num:"
@@ -128,4 +135,3 @@ int main(int argc, char *argv[]) {
     outputFile << array[i] << ' ';
   outputFile << "\n" << std::endl;
 }
-
